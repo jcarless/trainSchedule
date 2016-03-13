@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<!-- reset code -->
+	<link rel="stylesheet" href="assets/css/reset.css">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- bootswatch -->
+	<link rel="stylesheet" href="https://bootswatch.com/superhero/bootstrap.min.css">
+
+	<!-- clockface css -->
+	<link rel="stylesheet" href="assets/css/clockface.css">
+
+	<!-- my css -->
+	<link rel="stylesheet" href="assets/css/style.css">
+
+	<!-- firebase -->
+	<script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+
+</head>
+<body>
+	
+	<div class="container">
+
+	<!-- Jumbotron -->
+		<div class="row">
+			<div class="jumbotron">
+			    <h1>Train Schedule</h1> 
+			    <p>Add the information for your train to the public schedule.</p> 
+  			</div>
+		</div>
+
+	<!-- add train form -->
+		<div class="row">
+			<div class="col-xs-6">
+				<form class="form">
+					<div class="form-group">
+						<label>Train Name</label>
+						<input class="form-control" id="trainName" type="text">
+					</div>
+					<div class="form-group">
+						<label>Destination</label>
+						<input class="form-control" id="destination" type="text">
+					</div>
+					<div class="form-group">
+						<label>First Train Time</label>
+						<div class="input-group clockpicker">
+						    <input type="text" id="t1" value="9:30 AM" data-format="hh:mm A" class="input-small form-control">
+						    <span class="input-group-addon">
+						    <span class="glyphicon glyphicon-time"></span>
+						    </span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label>Frequency (mins)</label>
+						<input class="form-control" id="frequency" type="text">
+					</div>
+
+					<input type="submit" id='submit'>
+				</form>
+			</div>
+	<!-- table -->
+			<div class="col-xs-6 table-responsive">
+				<table class="table table-hover">
+					<tr style="font-weight:bold">
+						<th>Train Name</th>
+						<th>Destinantion</th>
+						<th>Frequency (mins)</th>
+						<th>Next Arrival</th>
+						<th>Minutes Away</th>
+					</tr>
+			
+				</table>
+			</div>
+		
+		</div>
+
+	</div> <!-- container -->
+
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-2.2.1.js" integrity="sha256-eNcUzO3jsv0XlJLveFEkbB8bA7/CroNpNVk3XpmnwHc=" crossorigin="anonymous"></script>
+	<!-- moment js -->
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+	<!-- clock face js -->
+	<script type="text/javascript" src='assets/javascript/clockface.js'></script>
+	<!-- my js -->
+	<script type="text/javascript" src='assets/javascript/app.js'></script>
+</body>
+</html>
