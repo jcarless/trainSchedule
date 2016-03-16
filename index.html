@@ -64,6 +64,7 @@
 					<input type="submit" id='submit'>
 				</form>
 			</div>
+
 	<!-- table -->
 			<div class="col-xs-6 table-responsive">
 				<table class="table table-hover">
@@ -82,17 +83,31 @@
 				</table>
 			</div>
 		
-		</div>
+		</div> <!-- row -->
 
 	</div> <!-- container -->
 
 	<!-- jquery -->
 	<script src="https://code.jquery.com/jquery-2.2.1.js" integrity="sha256-eNcUzO3jsv0XlJLveFEkbB8bA7/CroNpNVk3XpmnwHc=" crossorigin="anonymous"></script>
+
 	<!-- moment js -->
 	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
 	<!-- clock face js -->
 	<script type="text/javascript" src='assets/javascript/clockface.js'></script>
+	
 	<!-- my js -->
 	<script type="text/javascript" src='assets/javascript/app.js'></script>
+
+	<script type="text/JavaScript">
+<!--
+function timedRefresh(timeoutPeriod) {
+	setTimeout("location.reload(true);",timeoutPeriod);
+}
+
+window.onload = timedRefresh(60*1000);
+
+//   -->
+</script>
 </body>
 </html>
